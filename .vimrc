@@ -60,6 +60,20 @@ set showcmd
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
 
+" max out at 80 characters bro
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/                                                                    
+
+" disable arrow keys -- don't be a bitch
+map   <up>    <nop>
+map   <down>  <nop>
+map   <left>  <nop>
+map   <right> <nop>
+imap  <up>    <nop>
+imap  <down>  <nop>
+imap  <left>  <nop>
+imap  <right> <nop>
+
 " Strip trailing whitespace (,ss)
 function! StripWhitespace()
 	let save_cursor = getpos(".")
