@@ -2,10 +2,10 @@
 call pathogen#infect()
 
 " solarized
-syntax enable
-set background=dark
 colorscheme solarized
+set background=dark
 set t_Co=256
+syntax enable
 
 " Make vim more useful
 set nocompatible
