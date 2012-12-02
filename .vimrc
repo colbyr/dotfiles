@@ -5,6 +5,7 @@ call pathogen#infect()
 syntax enable
 set background=dark
 colorscheme solarized
+set t_Co=256
 
 " Make vim more useful
 set nocompatible
