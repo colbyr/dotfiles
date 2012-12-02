@@ -1,3 +1,11 @@
+" pathogen
+call pathogen#infect()
+
+" solarized
+syntax enable
+set background=dark
+colorscheme solarized
+
 " Make vim more useful
 set nocompatible
 " Enhance command-line completion
@@ -16,8 +24,6 @@ set noeol
 
 " Enable line numbers
 set number
-" Enable syntax highlighting
-syntax on
 " Highlight current line
 set cursorline
 " use spaces not tabs
