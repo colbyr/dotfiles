@@ -6,5 +6,8 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+# nodejs
+export NODE_PATH="/usr/local/lib/node"
+
 # Customize to your needs...
-export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/share/npm/bin:$PATH
