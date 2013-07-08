@@ -1,6 +1,6 @@
 [user]
   name = Colby Rabideau
-  email = crabideau5691@gmail.com
+  email = idontknow5691@gmail.com
 [core]
   excludesfile = /Users/colby/.gitignore_global
 [color]
@@ -33,3 +33,5 @@
   ds = diff --stat=160,120
   dh1 = diff HEAD~1
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+[push]
+	default = simple

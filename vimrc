@@ -1,6 +1,10 @@
 " pathogen
 call pathogen#infect()
 
+" typescript
+autocmd QuickFixCmdPost [^l]* nested cwindow
+autocmd QuickFixCmdPost    l* nested lwindow
+
 " solarized
 colorscheme solarized
 set background=dark
@@ -22,6 +26,8 @@ let mapleader=","
 " Don’t add empty newlines at the end of files
 set binary
 set noeol
+" legit pasting
+set paste
 
 " Enable line numbers
 set number
