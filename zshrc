@@ -33,3 +33,4 @@ alias art="php artisan"
 # Python
 PATH="/usr/local/share/python:$PATH"
 
+source ~/.zsh_profile
