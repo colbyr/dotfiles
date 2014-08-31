@@ -5,6 +5,9 @@ ln -fs ~/dotfiles/vimrc ~/.vimrc;
 ln -fs ~/dotfiles/gitconfig ~/.gitconfig;
 ln -fs ~/dotfiles/gitignore_global ~/.gitignore_global;
 
+# create .zsh_profile for local config
+touch ~/.zsh_profile
+
 # install pathogen
 mkdir -p ~/.vim/autoload ~/.vim/bundle; \
 curl -Sso ~/.vim/autoload/pathogen.vim \
