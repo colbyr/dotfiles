@@ -1,1 +1,4 @@
+Plugin 'altercation/vim-colors-solarized'
+
+" local plugins
 source ~/.vim_plugins
