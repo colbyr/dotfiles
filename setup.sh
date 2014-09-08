@@ -5,12 +5,13 @@ ln -fs ~/dotfiles/vimrc ~/.vimrc;
 ln -fs ~/dotfiles/gitconfig ~/.gitconfig;
 ln -fs ~/dotfiles/gitignore_global ~/.gitignore_global;
 
-# create .zsh_profile for local config
+# create profiles for local config
+touch ~/.vim_plugins
+touch ~/.vim_profile
 touch ~/.zsh_profile
 
-# install pathogen
-mkdir -p ~/.vim/autoload ~/.vim/bundle;
-curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim;
+# install Vundle
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 cd ~/.vim/bundle && git clone git://github.com/altercation/vim-colors-solarized.git && cd ~;
 

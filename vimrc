@@ -1,18 +1,27 @@
 " pathogen
 call pathogen#infect()
 
-" typescript
 autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost    l* nested lwindow
 
 " solarized
 colorscheme solarized
-set background=dark
+set background=light
 set t_Co=256
 syntax enable
 
 " Make vim more useful
 set nocompatible
+
+" Vundle
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
+source ~/dotfiles/vim_plugins
+call vundle#end()
+filetype plugin indent on
+
 " Enhance command-line completion
 set wildmenu
 " Allow cursor keys in insert mode
@@ -69,7 +78,7 @@ set scrolloff=3
 
 " max out at 80 characters bro
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/                                                                    
+match OverLength /\%81v.\+/
 
 " disable arrow keys -- don't be a bitch
 map   <up>    <nop>
@@ -83,11 +92,11 @@ imap  <right> <nop>
 
 " Strip trailing whitespace (,ss)
 function! StripWhitespace()
-	let save_cursor = getpos(".")
-	let old_query = getreg('/')
-	:%s/\s\+$//e
-	call setpos('.', save_cursor)
-	call setreg('/', old_query)
+  let save_cursor = getpos(".")
+  let old_query = getreg('/')
+  :%s/\s\+$//e
+  call setpos('.', save_cursor)
+  call setreg('/', old_query)
 endfunction
 noremap <leader>ss :call StripWhitespace()<CR>
 " Save a file as root (,W)
@@ -95,8 +104,11 @@ noremap <leader>W :w !sudo tee % > /dev/null<CR>
 
 " Automatic commands
 if has("autocmd")
-	" Enable file type detection
-	filetype on
-	" Treat .json files as .js
-	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
+  " Enable file type detection
+  filetype on
+  " Treat .json files as .js
+  autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 endif
+
+" import a local profile
+source ~/.vim_profile
