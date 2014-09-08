@@ -1,15 +1,3 @@
-" pathogen
-call pathogen#infect()
-
-autocmd QuickFixCmdPost [^l]* nested cwindow
-autocmd QuickFixCmdPost    l* nested lwindow
-
-" solarized
-colorscheme solarized
-set background=light
-set t_Co=256
-syntax enable
-
 " Make vim more useful
 set nocompatible
 
@@ -22,63 +10,70 @@ source ~/dotfiles/vim_plugins
 call vundle#end()
 filetype plugin indent on
 
-" Enhance command-line completion
-set wildmenu
-" Allow cursor keys in insert mode
-set esckeys
+autocmd QuickFixCmdPost [^l]* nested cwindow
+autocmd QuickFixCmdPost    l* nested lwindow
+
+" Solarized colorscheme
+colorscheme solarized
+set background=light
+set t_Co=256
+
+" Syntax highlighting
+syntax enable
+" Line numbers
+set number
+" Current line highlight
+set cursorline
+" Show the cursor position
+set ruler
+" Don’t reset cursor to start of line when moving around.
+set nostartofline
+
+" “invisible” characters
+set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
+set list
+
 " Optimize for fast terminal connections
 set ttyfast
 " Use UTF-8 without BOM
 set encoding=utf-8 nobomb
 " Change mapleader
 let mapleader=","
-" Don’t add empty newlines at the end of files
-set binary
-set noeol
 
-" Enable line numbers
-set number
-" Highlight current line
-set cursorline
-" use spaces not tabs
+" Space-tabs
 set expandtab
-" Make tabs as wide as two spaces
+" Tab size
 set tabstop=2
 set shiftwidth=2
+" Indent behavior
 set autoindent
 set smartindent
 
-" Show “invisible” characters
-set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
-set list
 " Highlight searches
 set hlsearch
 " Highlight dynamically as pattern is typed
 set incsearch
+
 " Always show status line
 set laststatus=2
-" Enable mouse in all modes
-set mouse=a
-" Disable error bells
-set noerrorbells
-" Don’t reset cursor to start of line when moving around.
-set nostartofline
-" Show the cursor position
-set ruler
-" Don’t show the intro message when starting vim
-set shortmess=atI
 " Show the current mode
 set showmode
 " Show the filename in the window titlebar
 set title
 " Show the (partial) command as it’s being typed
 set showcmd
+" Disable error bells
+set noerrorbells
+" Don’t show the intro message when starting vim
+set shortmess=atI
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
+" Enable mouse in all modes
+set mouse=a
 
 " max out at 80 characters bro
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
+highlight OverLength ctermbg=darkred ctermfg=white guibg=#592929
+match OverLength /\%>80v.\+/
 
 " disable arrow keys -- don't be a bitch
 map   <up>    <nop>
@@ -99,16 +94,6 @@ function! StripWhitespace()
   call setreg('/', old_query)
 endfunction
 noremap <leader>ss :call StripWhitespace()<CR>
-" Save a file as root (,W)
-noremap <leader>W :w !sudo tee % > /dev/null<CR>
-
-" Automatic commands
-if has("autocmd")
-  " Enable file type detection
-  filetype on
-  " Treat .json files as .js
-  autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
-endif
 
 " import a local profile
 source ~/.vim_profile
