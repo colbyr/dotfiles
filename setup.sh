@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # sym links
-ln -fs ~/dotfiles/vimrc ~/.vimrc;
+ln -fs ~/dotfiles/vim/vimrc ~/.vimrc;
 ln -fs ~/dotfiles/gitconfig ~/.gitconfig;
 ln -fs ~/dotfiles/gitignore_global ~/.gitignore_global;
 
