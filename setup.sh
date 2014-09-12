@@ -2,8 +2,8 @@
 
 # sym links
 ln -fs ~/dotfiles/vim/vimrc ~/.vimrc;
-ln -fs ~/dotfiles/gitconfig ~/.gitconfig;
-ln -fs ~/dotfiles/gitignore_global ~/.gitignore_global;
+ln -fs ~/dotfiles/git/config ~/.gitconfig;
+ln -fs ~/dotfiles/git/ignore_global ~/.gitignore_global;
 
 # create profiles for local config
 touch ~/.vim_plugins
