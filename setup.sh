@@ -6,6 +6,7 @@ ln -fs ~/dotfiles/git/config ~/.gitconfig;
 ln -fs ~/dotfiles/git/ignore_global ~/.gitignore_global;
 
 # create profiles for local config
+touch ~/.git_profile
 touch ~/.vim_plugins
 touch ~/.vim_profile
 touch ~/.zsh_profile
