@@ -1,11 +1,13 @@
 [user]
   name = Colby Rabideau
   email = idontknow5691@gmail.com
+
 [core]
   excludesfile = ~/.gitignore_global
-  include = ~/.git_profile
+
 [color]
   ui = auto
+
 [alias]
   aa = add --all
   amend = !git commit --amend -m "$(git --no-pager log -1 --pretty=%s)"
@@ -22,5 +24,9 @@
   rpull = pull -r
   rs = !git --no-pager diff --name-only $1 | xargs -o vim -O
   st = status -s
+
 [push]
   default = current
+
+[include]
+  path = ~/.git_profile
