@@ -49,6 +49,9 @@ set shiftwidth=2
 set autoindent
 set smartindent
 
+" make backspace work like most other apps
+set backspace=2
+
 " Highlight searches
 set hlsearch
 " Highlight dynamically as pattern is typed
@@ -84,16 +87,6 @@ imap  <up>    <nop>
 imap  <down>  <nop>
 imap  <left>  <nop>
 imap  <right> <nop>
-
-" Strip trailing whitespace (,ss)
-function! StripWhitespace()
-  let save_cursor = getpos(".")
-  let old_query = getreg('/')
-  :%s/\s\+$//e
-  call setpos('.', save_cursor)
-  call setreg('/', old_query)
-endfunction
-noremap <leader>ss :call StripWhitespace()<CR>
 
 " import a local profile
 source ~/.vim_profile
