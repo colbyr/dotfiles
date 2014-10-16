@@ -24,6 +24,7 @@
   rpull = pull -r
   rs = !git --no-pager diff --name-only $1 | xargs -o vim -O
   st = status -s
+  update = !git stash && git pull --rebase origin master && git stash pop
 
 [push]
   default = current
