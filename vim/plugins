@@ -1,4 +1,5 @@
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'ConradIrwin/vim-bracketed-paste'
 Plugin 'mhinz/vim-signify'
 Plugin 'Valloric/YouCompleteMe'
 
