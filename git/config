@@ -15,6 +15,7 @@
   bo = checkout -b
   ci = commit
   co = checkout
+  coffeelint = !git --no-pager diff --name-only --diff-filter=MA origin/master | grep '.coffee' | xargs coffeelint -f ~/dotfiles/linters/coffeelint.json
   df = !git --no-pager diff --name-only
   di = diff
   dh = diff HEAD
