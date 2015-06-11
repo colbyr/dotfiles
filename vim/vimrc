@@ -13,9 +13,15 @@ filetype plugin indent on
 autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost    l* nested lwindow
 
+" markdown
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
 " configure NERDTree
 map <C-t> :NERDTreeFocus<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" indent guides
+let g:indent_guides_enable_on_vim_startup = 1
 
 " Solarized colorscheme
 colorscheme solarized
@@ -91,6 +97,20 @@ imap  <up>    <nop>
 imap  <down>  <nop>
 imap  <left>  <nop>
 imap  <right> <nop>
+
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
+
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+
+" ctrlp config
+
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/dist/*,*/build/*
 
 " import a local profile
 source ~/.vim_profile

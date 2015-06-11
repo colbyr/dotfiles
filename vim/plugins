@@ -3,7 +3,13 @@ Plugin 'ConradIrwin/vim-bracketed-paste'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-scripts/paredit.vim'
 Plugin 'mhinz/vim-signify'
-Plugin 'Valloric/YouCompleteMe'
+Bundle 'ervandew/supertab'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'SirVer/ultisnips'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'urthbound/hound.vim'
+Plugin 'kien/ctrlp.vim'
 
 " local plugins
 source ~/.vim_plugins
