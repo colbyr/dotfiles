@@ -9,7 +9,7 @@
   ui = auto
 
 [alias]
-  aa = add --all
+  aa = !git add --all && git status
   amend = !git commit --amend -m "$(git --no-pager log -1 --pretty=%s)"
   b = branch
   bo = checkout -b
@@ -33,6 +33,7 @@
 [include]
   path = ~/.git_profile
 [filter "hawser"]
-	clean = git hawser clean %f
-	smudge = git hawser smudge %f
-	required = true
+  clean = git hawser clean %f
+  smudge = git hawser smudge %f
+  required = true
+
