@@ -9,6 +9,7 @@ Bundle 'SirVer/ultisnips'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'urthbound/hound.vim'
+Plugin 'mattn/webapi-vim'
 Plugin 'kien/ctrlp.vim'
 
 " local plugins

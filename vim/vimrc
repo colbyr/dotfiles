@@ -23,6 +23,11 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 " indent guides
 let g:indent_guides_enable_on_vim_startup = 1
 
+" Hound config
+let g:hound_base_url = "localhost"
+let g:hound_port = "6080"
+map <C-f> :Hound<space>
+
 " Solarized colorscheme
 colorscheme solarized
 set background=light
