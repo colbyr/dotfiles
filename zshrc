@@ -7,6 +7,7 @@ plugins=(git)
 # set vim as the default editor
 export EDITOR=$(which vim)
 
+alias gnp="git --no-pager"
 alias tmyx="tmux"
 
 # load the profile first so we can override the zsh theme!
