@@ -8,5 +8,7 @@ plugins=(git)
 export EDITOR=$(which vim)
 
 
-source $ZSH/oh-my-zsh.sh
+# load the profile first so we can override the zsh theme!
 source ~/.zsh_profile
+
+source $ZSH/oh-my-zsh.sh
