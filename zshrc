@@ -5,7 +5,7 @@ ZSH_THEME="robbyrussell"
 plugins=(git)
 
 # set vim as the default editor
-export EDITOR=$(which vim)
+export EDITOR=$(which nvim)
 
 alias gnp="git --no-pager"
 alias tmyx="tmux"

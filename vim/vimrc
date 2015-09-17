@@ -117,5 +117,11 @@ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/dist/*,*/build/*
 
+" Neomake
+autocmd! BufWritePost * Neomake
+let g:neomake_open_list = 2
+let g:neomake_list_height = 4
+let g:neomake_javascript_enabled_makers = ['flow', 'eslint']
+
 " import a local profile
 source ~/.vim_profile
