@@ -30,7 +30,14 @@ map <C-f> :Hound<space>
 
 " Solarized colorscheme
 colorscheme solarized
-set background=light
+
+" use light from 6am to 6pm
+if strftime("%H") >= 6 && strftime("%H") < 18
+  set background=light
+else
+  set background=dark
+endif
+
 set t_Co=256
 
 " Syntax highlighting
@@ -108,14 +115,8 @@ let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:SuperTabDefaultCompletionType = '<C-n>'
 
-" better key bindings for UltiSnipsExpandTrigger
-let g:UltiSnipsExpandTrigger = "<tab>"
-let g:UltiSnipsJumpForwardTrigger = "<tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
-
 " ctrlp config
-
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/dist/*,*/build/*
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/dist/*,*/build/*,*resources*
 
 " Neomake
 autocmd! BufWritePost * Neomake
