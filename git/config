@@ -20,6 +20,8 @@
   di = diff
   dh = diff HEAD
   dm = diff master
+  g = !git --no-pager grep
+  gf = !git --no-pager grep -l
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
   rbm = rebase master
   rpull = pull -r
