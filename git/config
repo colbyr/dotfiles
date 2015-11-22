@@ -26,6 +26,7 @@
   rbm = rebase master
   rpull = pull -r
   rs = !git --no-pager diff --name-only $1 | xargs -o vim -O
+  sl = !git --no-pager log --graph --branches --decorate --oneline --boundary --author='Colby Rabideau' --topo-order --first-parent --simplify-by-decoration --pretty=format:%D%n
   st = status -s
   update = !git stash && git pull --rebase origin master && git stash pop
 
