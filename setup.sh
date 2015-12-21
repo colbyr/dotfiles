@@ -16,6 +16,6 @@ touch ~/.zsh_profile
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # install oh my zsh
- curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 ln -fs ~/dotfiles/zshrc ~/.zshrc;
 source ~/.zshrc
