@@ -25,7 +25,7 @@
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
   rbm = rebase master
   rpull = pull -r
-  rs = !git --no-pager diff --name-only $1 | xargs -o vim -O
+  rs = !git --no-pager diff --name-only $1 | xargs -o nvim -O
   sl = !git --no-pager log --graph --branches --decorate --oneline --boundary --author='Colby Rabideau' --topo-order --first-parent --simplify-by-decoration --pretty=format:%D%n
   st = status -s
   update = !git stash && git pull --rebase origin master && git stash pop
