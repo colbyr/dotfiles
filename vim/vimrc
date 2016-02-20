@@ -30,13 +30,7 @@ map <C-f> :Hound<space>
 
 " Solarized colorscheme
 colorscheme solarized
-
-" use light from 6am to 6pm
-if strftime("%H") >= 6 && strftime("%H") < 18
-  set background=light
-else
-  set background=dark
-endif
+set background=light
 
 set t_Co=256
 
@@ -116,12 +110,12 @@ let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:SuperTabDefaultCompletionType = '<C-n>'
 
 " ctrlp config
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/dist/*,*/build/*,*resources*
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/dist/*,*/build/*,*resources*,*/data/*
 
 " Neomake
 autocmd! BufWritePost * Neomake
 let g:neomake_open_list = 2
-let g:neomake_list_height = 4
+let g:neomake_list_height = 6
 let g:neomake_javascript_enabled_makers = ['flow', 'eslint']
 
 " press ESC to exit terminal model
