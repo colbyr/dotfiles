@@ -8,7 +8,6 @@ plugins=(git)
 export EDITOR=$(which nvim)
 
 alias gnp="git --no-pager"
-alias ll="ls -AFlo"
 alias nvimsplat="xargs -o nvim -O"
 alias tmyx="tmux"
 
@@ -16,3 +15,5 @@ alias tmyx="tmux"
 source ~/.zsh_profile
 
 source $ZSH/oh-my-zsh.sh
+
+alias ll="ls -AFlo"
