@@ -16,4 +16,4 @@ source ~/.zsh_profile
 
 source $ZSH/oh-my-zsh.sh
 
-alias ll="ls -AFlo"
+alias ll="ls -AFhlo"
