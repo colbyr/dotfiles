@@ -2,6 +2,7 @@
 
 # sym links
 ln -fs ~/dotfiles/emacs/spacemacs.el ~/.spacemacs;
+ln -fs ~/dotfiles/hyperterm/hyperterm.js ~/.hyperterm.js;
 ln -fs ~/dotfiles/vim/vimrc ~/.vimrc;
 ln -fs ~/dotfiles/git/config ~/.gitconfig;
 ln -fs ~/dotfiles/git/ignore_global ~/.gitignore_global;
