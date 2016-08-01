@@ -54,9 +54,10 @@ module.exports = {
 
     // the shell to run when spawning a new session (i.e. /usr/local/bin/fish)
     // if left empty, your system's login shell will be used by default
-    shell: ''
+    shell: '',
 
     // for advanced config flags please refer to https://hyperterm.org/#cfg
+    windowSize: [1280, 780],
   },
 
   // a list of plugins to fetch and install from npm
