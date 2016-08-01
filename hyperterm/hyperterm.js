@@ -66,6 +66,8 @@ module.exports = {
   //   `@company/project`
   //   `project#1.0.1`
   plugins: [
+    'hyperterm-1password',
+    'hyperterm-cursor',
     'hyperterm-solarized-light',
     'hyperterm-title',
   ],
