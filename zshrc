@@ -2,11 +2,12 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 
-plugins=(git)
+# plugins=(git)
 
-# set vim as the default editor
+# set nvim as the default editor
 export EDITOR=$(which nvim)
 
+alias g="git"
 alias gnp="git --no-pager"
 alias nvimsplat="xargs -o nvim -O"
 alias tmyx="tmux"
@@ -17,3 +18,5 @@ source ~/.zsh_profile
 source $ZSH/oh-my-zsh.sh
 
 alias ll="ls -AFhlo"
+
+export PATH="$HOME/.yarn/bin:$PATH"
