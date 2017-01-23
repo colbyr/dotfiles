@@ -7,6 +7,8 @@ ZSH_THEME="robbyrussell"
 # set nvim as the default editor
 export EDITOR=$(which nvim)
 
+export PATH="$HOME/dotfiles/bin:$PATH"
+
 alias g="git"
 alias gnp="git --no-pager"
 alias nvimsplat="xargs -o nvim -O"
@@ -18,5 +20,3 @@ source ~/.zsh_profile
 source $ZSH/oh-my-zsh.sh
 
 alias ll="ls -AFhlo"
-
-export PATH="$HOME/.yarn/bin:$PATH"

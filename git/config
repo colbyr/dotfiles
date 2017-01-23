@@ -4,6 +4,7 @@
 
 [core]
   excludesfile = ~/.gitignore_global
+  hooksPath = /Users/crabideau/.git_hooks
 
 [color]
   ui = auto
