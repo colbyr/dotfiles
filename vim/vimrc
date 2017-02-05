@@ -119,7 +119,7 @@ let g:neomake_list_height = 6
 let g:neomake_javascript_enabled_makers = ['flow', 'eslint']
 
 " press ESC to exit terminal model
-tnoremap <Esc> <C-\><C-n>
+" tnoremap <Esc> <C-\><C-n>
 
 " import a local profile
 source ~/.vim_profile
