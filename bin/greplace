@@ -15,3 +15,4 @@ IFS=$'\n'
 for item in $items; do
   sed "s/$find_this/$replace_with/g" "$item" > "$temp" && mv "$temp" "$item"
 done
+git st
