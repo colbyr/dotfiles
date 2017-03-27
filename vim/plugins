@@ -1,15 +1,14 @@
+Plugin 'w0rp/ale'
+Plugin 'kien/ctrlp.vim'
+Plugin 'Valloric/ListToggle'
+Plugin 'scrooloose/nerdtree'
+Bundle 'ervandew/supertab'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'ConradIrwin/vim-bracketed-paste'
-Plugin 'scrooloose/nerdtree'
-Plugin 'mhinz/vim-signify'
-" Bundle 'ervandew/supertab'
+Plugin 'flowtype/vim-flow'
 Plugin 'nathanaelkane/vim-indent-guides'
-" Plugin 'leafgarland/typescript-vim'
-" Plugin 'urthbound/hound.vim'
-" Plugin 'mattn/webapi-vim'
-Plugin 'kien/ctrlp.vim'
-" Plugin 'benekastah/neomake'
-" Plugin 'Valloric/YouCompleteMe'
+Plugin 'mhinz/vim-signify'
+Plugin 'Valloric/YouCompleteMe'
 
 " local plugins
 source ~/.vim_plugins

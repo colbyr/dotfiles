@@ -7,7 +7,6 @@
 
 [core]
   excludesfile = ~/.gitignore_global
-	hooksPath = /Users/crabideau/.git_hooks
 
 [color]
   ui = auto
@@ -19,14 +18,13 @@
   bo = checkout -b
   ci = commit
   co = checkout
-  coffeelint = !git --no-pager diff --name-only --diff-filter=MA origin/master | grep '.coffee' | xargs coffeelint -f ~/dotfiles/linters/coffeelint.json
   df = !git --no-pager diff --name-only
   di = diff
   dh = diff HEAD
   dm = diff master
   g = !git --no-pager grep
   gf = !git --no-pager grep -l
-  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+  lg = log --graph --oneline --decorate --all
   rbm = rebase master
   rpull = pull -r
   rs = !git --no-pager diff --name-only $1 | xargs -o nvim -O

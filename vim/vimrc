@@ -13,6 +13,9 @@ filetype plugin indent on
 autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost    l* nested lwindow
 
+" Change mapleader
+let mapleader=" "
+
 " markdown
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
@@ -53,8 +56,6 @@ set list
 set ttyfast
 " Use UTF-8 without BOM
 set encoding=utf-8 nobomb
-" Change mapleader
-let mapleader=","
 
 " Space-tabs
 set expandtab
@@ -94,7 +95,7 @@ set mouse=a
 highlight OverLength ctermbg=darkred ctermfg=white guibg=#592929
 match OverLength /\%>80v.\+/
 
-" disable arrow keys -- don't be a bitch
+" disable arrow keys
 map   <up>    <nop>
 map   <down>  <nop>
 map   <left>  <nop>
@@ -109,17 +110,19 @@ let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:SuperTabDefaultCompletionType = '<C-n>'
 
+" ale (linting stuff)
+let g:ale_sign_column_always = 1
+
 " ctrlp config
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/dist/*,*/build/*,*resources*,*/data/*
 
-" Neomake
-autocmd! BufWritePost * Neomake
-let g:neomake_open_list = 2
-let g:neomake_list_height = 6
-let g:neomake_javascript_enabled_makers = ['flow', 'eslint']
+" list toggle
+let g:lt_height = 6
 
-" press ESC to exit terminal model
-" tnoremap <Esc> <C-\><C-n>
+" prettier
+autocmd FileType javascript set formatprg=prettier\ --stdin\ --parser\ flow\ --bracket-spacing\ false\ --jsx-bracket-same-line\ --single-quote\ --trailing-comma\ es5
+autocmd BufWritePre *.js :normal gggqG
+autocmd BufWritePre *.js exe "normal! gggqG\<C-o>\<C-o>"
 
 " import a local profile
 source ~/.vim_profile
