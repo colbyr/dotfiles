@@ -111,6 +111,8 @@ let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:SuperTabDefaultCompletionType = '<C-n>'
 
 " ale (linting stuff)
+let g:ale_set_loclist = 0
+let g:ale_set_quickfix = 1
 let g:ale_sign_column_always = 1
 
 " ctrlp config
@@ -120,7 +122,8 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/dist/*,*/build/*,*re
 let g:lt_height = 6
 
 " prettier
-autocmd FileType javascript set formatprg=prettier\ --stdin\ --parser\ flow\ --bracket-spacing\ false\ --jsx-bracket-same-line\ --single-quote\ --trailing-comma\ es5
+"autocmd FileType javascript set formatprg=prettier\ --parser\ flow\ --stdin\ --bracket-spacing\ true
+autocmd FileType javascript set formatprg=prettier\ --parser\ flow\ --stdin\ --bracket-spacing\ false\ --jsx-bracket-same-line\ --single-quote\ --trailing-comma\ es5
 autocmd BufWritePre *.js :normal gggqG
 autocmd BufWritePre *.js exe "normal! gggqG\<C-o>\<C-o>"
 
