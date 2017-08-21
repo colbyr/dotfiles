@@ -33,7 +33,7 @@ map <C-f> :Hound<space>
 
 " Solarized colorscheme
 colorscheme solarized
-set background=light
+set background=dark
 
 set t_Co=256
 
@@ -120,12 +120,6 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/dist/*,*/build/*,*re
 
 " list toggle
 let g:lt_height = 6
-
-" prettier
-"autocmd FileType javascript set formatprg=prettier\ --parser\ flow\ --stdin\ --bracket-spacing\ true
-autocmd FileType javascript set formatprg=prettier\ --parser\ flow\ --stdin\ --bracket-spacing\ false\ --jsx-bracket-same-line\ --single-quote\ --trailing-comma\ es5
-autocmd BufWritePre *.js :normal gggqG
-autocmd BufWritePre *.js exe "normal! gggqG\<C-o>\<C-o>"
 
 " import a local profile
 source ~/.vim_profile
