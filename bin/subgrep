@@ -5,7 +5,7 @@
 #
 # For example...
 
-#   subgrep somemodule 'someFunction('
+#   subgrep 'import SomeModule' 'someFunction('
 #
 # ...looks for any matches of "someFunction(" in files that match "somemodule".
 
