@@ -1,0 +1,17 @@
+#!/bin/sh
+
+summary="subgrep: "
+
+result=$(git --no-pager grep -l $1)
+summary="$summary $1"
+shift
+
+while [ $# -gt 1 ]; do
+  result=$(echo $result | xargs git --no-pager grep -l $1)
+  summary="$summary > $1"
+  shift
+done
+
+echo $summary
+echo $result | xargs git --no-pager grep $1 
+
