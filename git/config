@@ -2,8 +2,8 @@
   path = ~/.git_profile
 
 [user]
-  name = Colby Rabideau
-  email = crabideau@hubspot.com
+	name = Colby Rabideau
+	email = crabideau@hubspot.com
 
 [core]
   excludesfile = ~/.gitignore_global
@@ -23,8 +23,10 @@
   di = diff
   dh = diff HEAD
   dm = diff master
-  g = !git --no-pager grep
   gf = !git --no-pager grep -l
+  g = !exec git
+  git = !exec git
+  gr = !git --no-pager grep
   lg = log --graph --oneline --decorate --all
   rbm = rebase master
   rpull = pull -r
