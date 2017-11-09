@@ -2,14 +2,20 @@
 #
 # Find and replace by a given list of files.
 #
-# replace foo bar **/*.rb
+# greplace foo bar **/*.rb
+
+opts=""
+while [[ "$1" =~ ^- ]]; do
+  opts="$opts $1"
+  shift
+done
 
 find_this="$1"
 shift
 replace_with="$1"
 shift
 
-items=$(git --no-pager grep -l "$find_this")
+items=$(git --no-pager grep $opts -l "$find_this")
 temp="${TMPDIR:-/tmp}/replace_temp_file.$$"
 IFS=$'\n'
 for item in $items; do
