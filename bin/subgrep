@@ -1,4 +1,13 @@
 #!/bin/sh
+#
+# Given a series of grep regexps, looks for any matches in files that matched
+# the previous regexp.
+#
+# For example...
+
+#   subgrep somemodule 'someFunction('
+#
+# ...looks for any matches of "someFunction(" in files that match "somemodule".
 
 opts=""
 while [[ "$1" =~ ^- ]]; do
