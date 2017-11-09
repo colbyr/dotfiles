@@ -1,7 +1,13 @@
 #!/bin/sh
 
+opts=""
+while [[ "$1" =~ ^- ]]; do
+  opts="$opts $1"
+  shift
+done
+
 if [ $# -eq 1 ]; then
-  git --no-pager grep $1
+  git --no-pager grep $opts $1
   exit
 fi
 
@@ -13,5 +19,5 @@ while [ $# -gt 1 ]; do
   shift
 done
 
-echo $result | xargs git --no-pager grep $1 
+echo $result | xargs git --no-pager grep $opts $1 
 
