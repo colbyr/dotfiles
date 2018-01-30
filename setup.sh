@@ -1,11 +1,7 @@
 #!/bin/bash
 
 # sym links
-ln -fs ~/dotfiles/emacs/spacemacs.el ~/.spacemacs;
-ln -fs ~/dotfiles/hyperterm/hyperterm.js ~/.hyperterm.js;
 ln -fs ~/dotfiles/vim/vimrc ~/.vimrc;
-mkdir -p ~/.config/nvim
-ln -fs ~/dotfiles/vim/vimrc ~/.config/nvim/init.vim
 ln -fs ~/dotfiles/git/config ~/.gitconfig;
 ln -fs ~/dotfiles/git/ignore_global ~/.gitignore_global;
 ln -fs ~/dotfiles/tmux/tmux.conf ~/.tmux.conf;
