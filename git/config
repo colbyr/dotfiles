@@ -1,10 +1,6 @@
 [include]
   path = ~/.git_profile
 
-[user]
-	name = Colby Rabideau
-	email = crabideau@hubspot.com
-
 [core]
   excludesfile = ~/.gitignore_global
 
