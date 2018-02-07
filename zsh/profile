@@ -1,0 +1,13 @@
+# Path to your oh-my-zsh configuration.
+ZSH=$HOME/.oh-my-zsh
+ZSH_THEME="robbyrussell"
+
+export EDITOR=$(which vim)
+export PATH="$HOME/dotfiles/bin:$PATH"
+
+alias g="git"
+alias gnp="git --no-pager"
+alias ll="ls -AFhlo"
+alias vimsplat="xargs -o vim -O"
+alias tmyx="tmux"
+

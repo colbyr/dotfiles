@@ -1,0 +1,13 @@
+######################################
+# Defaults from                      #
+# https://github.com/colbyr/dotfiles #
+######################################
+
+source $HOME/dotfiles/zsh/profile
+source $ZSH/oh-my-zsh.sh
+
+######################################
+# End of defaults!                   #
+######################################
+
+
