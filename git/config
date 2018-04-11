@@ -14,6 +14,7 @@
   bo = checkout -b
   ci = commit
   co = checkout
+  common = merge-base HEAD master
   df = !git --no-pager diff --name-only
   di = diff
   dh = diff HEAD
@@ -23,6 +24,7 @@
   git = !exec git
   gr = !git --no-pager grep
   lg = log --graph --oneline --decorate --all
+  lm = !git --no-pager log --decorate --oneline $(git common)^..
   rbm = rebase master
   rpull = pull -r
   rs = !git --no-pager diff --name-only $1 | xargs -o nvim -O
