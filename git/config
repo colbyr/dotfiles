@@ -46,3 +46,5 @@
   required = true
 [hub]
   host = git.hubteam.com
+[pull]
+  rebase = true
