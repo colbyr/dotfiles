@@ -5,7 +5,7 @@ ZSH_THEME="robbyrussell"
 export EDITOR=$(which vim)
 export PATH="$HOME/dotfiles/bin:$PATH"
 
-alias g="git --no-pager"
+alias g="git"
 alias gnp="git --no-pager"
 alias ll="ls -AFhlo"
 alias vimsplat="xargs -o vim -O"

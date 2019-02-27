@@ -10,7 +10,7 @@
 [alias]
   aa = !git add --all && git status
   amend = !git commit --amend -m "$(git --no-pager log -1 --pretty=%s)"
-  b = branch
+  b = !git --no-pager branch
   bo = checkout -b
   ci = commit
   co = checkout
@@ -30,7 +30,7 @@
   rs = !git --no-pager diff --name-only $1 | xargs -o nvim -O
   sl = !git --no-pager log --graph --branches --decorate --oneline --boundary --author='Colby Rabideau' --topo-order --first-parent --simplify-by-decoration --pretty=format:%D%n
   st = status -s
-  update = !git stash && git pull --rebase origin master && git stash pop
+  update = !git add --all && git stash && git pull --rebase origin master && git stash pop
 
 [push]
   default = current
