@@ -1,14 +1,15 @@
 function node_prompt_version {
     if which node &> /dev/null; then
-        echo "%{$fg_bold[blue]%}n(%{$fg[gray]%}%{$reset_color%}$(node -v)%{$fg_bold[blue]%})%{$reset_color%} "
+        echo "node:%{$fg_bold[red]%}$(node -v)%{$reset_color%} "
     fi
 }
 
 local ret_status="%(?:%{$fg_bold[green]%}➜:%{$fg_bold[red]%}➜) "
-PROMPT='%{$fg[cyan]%}%c%{$reset_color%} — $(node_prompt_version)$(git_prompt_info)
-${ret_status}%{$reset_color%}'
+local user="user:%{$fg_bold[red]%}$USER%{$reset_color%} "
+PROMPT='$(git_prompt_info) $(node_prompt_version) ${user}
+%{$fg[cyan]%}%c%{$reset_color%} ${ret_status}%{$reset_color%}'
 
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}g(%{$fg[red]%}"
+ZSH_THEME_GIT_PROMPT_PREFIX="git:%{$fg_bold[red]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[yellow]%}✗ "
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%}) "
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$reset_color%} %{$fg[yellow]%}✗ "
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$reset_color%} "
