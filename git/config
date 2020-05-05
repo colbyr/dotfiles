@@ -1,6 +1,3 @@
-[include]
-  path = ~/.git_profile
-
 [core]
   excludesfile = ~/.gitignore_global
 
@@ -12,6 +9,7 @@
   amend = !git commit --amend -m "$(git --no-pager log -1 --pretty=%s)"
   b = !git --no-pager branch
   bo = checkout -b
+  bh = !git reflog show --pretty=format:'%gs ~ %gd' --date=relative | grep 'checkout:' | grep -oE '[^ ]+ ~ .*' | awk -F~ '!seen[$1]++' | head -n 10 | awk -F' ~ HEAD@{' '{printf(\"%s (%s)\\n\", $1, substr($2, 1, length($2)-1))}'
   ci = commit
   co = checkout
   common = merge-base HEAD master
@@ -19,13 +17,16 @@
   di = diff
   dh = diff HEAD
   dm = diff master
+  fush = push --force-with-lease
   gf = !git --no-pager grep -l
   g = !exec git
   git = !exec git
   gr = !git --no-pager grep
   lg = log --graph --oneline --decorate --all
   lm = !git --no-pager log --decorate --oneline $(git common)^..
+  mb = !git merge-base HEAD $1
   rbm = rebase master
+  remote = !git for-each-ref --format='%(upstream:short)' "$(git symbolic-ref -q HEAD)"
   rpull = pull -r
   rs = !git --no-pager diff --name-only $1 | xargs -o nvim -O
   sl = !git --no-pager log --graph --branches --decorate --oneline --boundary --author='Colby Rabideau' --topo-order --first-parent --simplify-by-decoration --pretty=format:%D%n
@@ -47,3 +48,7 @@
   process = git-lfs filter-process
 [pull]
   rebase = true
+
+[include]
+  path = ~/.git_profile
+

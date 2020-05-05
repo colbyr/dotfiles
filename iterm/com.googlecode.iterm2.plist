@@ -10,6 +10,8 @@
 	<false/>
 	<key>AppleAntiAliasingThreshold</key>
 	<integer>1</integer>
+	<key>ApplePressAndHoldEnabled</key>
+	<false/>
 	<key>AppleScrollAnimationEnabled</key>
 	<integer>0</integer>
 	<key>AppleSmoothFixedFontsSizeThreshold</key>
@@ -514,7 +516,7 @@
 	<key>NSNavLastRootDirectory</key>
 	<string>~/dotfiles/iterm</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
-	<string>{712, 448}</string>
+	<string>{799, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -556,12 +558,14 @@
 		<key>TB Is Shown</key>
 		<integer>1</integer>
 	</dict>
+	<key>NSWindow Frame NSNavPanelAutosaveName</key>
+	<string>880 726 799 448 0 0 2560 1417 </string>
 	<key>NSWindow Frame ProfilesPanel</key>
 	<string>1117 487 735 382 0 0 2560 1417 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>970 768 620 392 0 0 2560 1417 </string>
+	<string>3090 299 620 392 2560 -177 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>854 0 1705 1417 0 0 2560 1417 </string>
+	<string>3 3 1674 1021 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 0 1680 1027 0 0 1680 1027 </string>
 	<key>New Bookmarks</key>
@@ -2161,7 +2165,9 @@
 		<string>3.3.6</string>
 		<string>3.3.7beta4</string>
 		<string>3.3.7beta3</string>
+		<string>3.3.8beta5</string>
 		<string>3.3.7beta2</string>
+		<string>3.3.8beta4</string>
 		<string>3.3.8beta3</string>
 		<string>3.3.8beta2</string>
 		<string>3.3.8beta1</string>
@@ -2180,7 +2186,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>9E692A20-4D03-4077-B643-7EBA5B470549</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>43</integer>
+	<integer>71</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
 	<real>594308697.93274903</real>
 	<key>NoSyncOnboardingWindowHasBeenShown</key>
@@ -2963,7 +2969,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-12-30T16:12:04Z</date>
+	<date>2020-02-06T15:02:54Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
@@ -2975,7 +2981,7 @@
 	<key>ShowBookmarkName</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<true/>
+	<false/>
 	<key>ShowPaneTitles</key>
 	<true/>
 	<key>SmartPlacement</key>
@@ -3027,6 +3033,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.3.8beta3</string>
+	<string>3.3.8beta5</string>
 </dict>
 </plist>
