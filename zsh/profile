@@ -17,3 +17,7 @@ alias ll="ls -AFhlo"
 alias vimsplat="xargs -o vim -O"
 alias tmyx="tmux"
 
+pi() {
+  cat ./package.json | jq ".$1"
+}
+
