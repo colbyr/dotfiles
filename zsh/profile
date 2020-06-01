@@ -17,6 +17,18 @@ alias ll="ls -AFhlo"
 alias vimsplat="xargs -o vim -O"
 alias tmyx="tmux"
 
+function notify {
+  /usr/bin/osascript -e "display notification \"$*\""
+}
+
+function lmk {
+  if eval "$@"; then
+    notify "\`$@\` succeeded 🙌"
+  else
+    notify "\`$@\` failed 💔"
+  fi
+}
+
 pi() {
   cat ./package.json | jq ".$1"
 }
