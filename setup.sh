@@ -1,10 +1,20 @@
 #!/bin/bash
 
+
 # sym links
 ln -fs ~/dotfiles/vim/vimrc ~/.vimrc;
 ln -fs ~/dotfiles/git/config ~/.gitconfig;
 ln -fs ~/dotfiles/git/ignore_global ~/.gitignore_global;
 ln -fs ~/dotfiles/tmux/tmux.conf ~/.tmux.conf;
+ln -fs ~/dotfiles/Brewfile ~/Brewfile;
+
+# install homebrew
+$CURRENT_DIR=$(pwd)
+cd ~
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+brew bundle
+cd $CURRENT_DIR
+
 
 # create profiles for local config
 touch ~/.git_profile
