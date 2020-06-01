@@ -33,6 +33,12 @@
   st = status -s
   update = !git add --all && git stash && git pull --rebase origin master && git stash pop
 
+  # commands for repos that use "develop" instead of "master"
+  cd = merge-base HEAD develop
+  dd = diff develop
+  ld = !git --no-pager log --decorate --oneline $(git cd)^..
+  rbd = rebase develop
+
 [push]
   default = current
 
