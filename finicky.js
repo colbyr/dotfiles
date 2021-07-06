@@ -9,6 +9,7 @@ module.exports = {
   handlers: [
     {
       match: [
+        finicky.matchHostnames(['localhost']),
         "meet.google.com*"
       ],
       browser: "Google Chrome"

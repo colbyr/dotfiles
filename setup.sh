@@ -7,6 +7,7 @@ ln -fs ~/dotfiles/git/config ~/.gitconfig;
 ln -fs ~/dotfiles/git/ignore_global ~/.gitignore_global;
 ln -fs ~/dotfiles/tmux/tmux.conf ~/.tmux.conf;
 ln -fs ~/dotfiles/Brewfile ~/Brewfile;
+ln -fs ~/dotfiles/finicky.js ~/.finicky.js;
 
 # install homebrew
 $CURRENT_DIR=$(pwd)
