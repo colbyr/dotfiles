@@ -9,6 +9,9 @@ ln -fs ~/dotfiles/tmux/tmux.conf ~/.tmux.conf;
 ln -fs ~/dotfiles/Brewfile ~/Brewfile;
 ln -fs ~/dotfiles/finicky.js ~/.finicky.js;
 
+mkdir -p ~/.config/nvim
+ln -fs ~/dotfiles/nvim/init.vim ~/.config/nvim/init.vim;
+
 # install homebrew
 $CURRENT_DIR=$(pwd)
 cd ~
