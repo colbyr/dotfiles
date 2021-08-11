@@ -7,7 +7,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'ConradIrwin/vim-bracketed-paste'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'mhinz/vim-signify'
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'neovim/nvim-lspconfig'
 
 " local plugins
 source ~/.vim_plugins
