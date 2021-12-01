@@ -6,13 +6,29 @@
  */
 module.exports = {
   defaultBrowser: "Firefox",
+  options: {
+    hideIcon: true
+  },
   handlers: [
     {
       match: [
         finicky.matchHostnames(['localhost']),
-        "meet.google.com*"
+        "meet.google.com*",
+        "riverside.fm*",
       ],
-      browser: "Google Chrome"
+      browser: "Google Chrome",
+    },
+    {
+      match: "open.spotify.com/*",
+      browser: "Spotify"
+    },
+    {
+      match: [
+        "zoom.us/*",
+        finicky.matchDomains(/.*\zoom.us/),
+        /zoom.us\/j\//,
+      ],
+      browser: "us.zoom.xos"
     }
   ]
 };
