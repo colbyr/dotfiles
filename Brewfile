@@ -1,7 +1,11 @@
 brew "git"
 brew "jq"
+brew "nvim"
 brew "tmux"
 brew "watchman"
 brew "wget"
 brew "yarn"
 
+cask "finicky"
+cask "raycast"
+cask "rectangle"
