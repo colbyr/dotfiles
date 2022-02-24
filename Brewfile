@@ -4,7 +4,6 @@ brew "nvim"
 brew "tmux"
 brew "watchman"
 brew "wget"
-brew "yarn"
 
 cask "finicky"
 cask "raycast"
