@@ -52,9 +52,7 @@
   smudge = git-lfs smudge -- %f
   required = true
   process = git-lfs filter-process
+
 [pull]
   rebase = true
-
-[include]
-  path = ~/.git_profile
 
