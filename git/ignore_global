@@ -65,3 +65,5 @@ TAGS
 *.paw
 
 .env.*.local
+
+.claude/*

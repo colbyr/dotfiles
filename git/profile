@@ -12,11 +12,11 @@
   bh = !git reflog show --pretty=format:'%gs ~ %gd' --date=relative | grep 'checkout:' | grep -oE '[^ ]+ ~ .*' | awk -F~ '!seen[$1]++' | head -n 20 | awk -F' ~ HEAD@{' '{printf(\"%s (%s)\\n\", $1, substr($2, 1, length($2)-1))}'
   ci = commit
   co = checkout
-  common = merge-base HEAD main
+  common = "!git merge-base HEAD $(git main-branch)"
   df = !git --no-pager diff --name-only
   di = diff
   dh = diff HEAD
-  dm = diff main
+  dm = "!git diff $(git main-branch)"
   fush = push --force-with-lease
   gf = !git --no-pager grep -l
   g = !exec git
@@ -24,20 +24,15 @@
   gr = !git --no-pager grep -n
   lg = log --graph --oneline --decorate --all
   lm = !git --no-pager log --decorate --oneline $(git common)^..
+  main-branch = "!git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@'"
   mb = !git merge-base HEAD $1
-  rbm = rebase main
+  rbm = "!git rebase $(git main-branch)"
   remote = !git for-each-ref --format='%(upstream:short)' "$(git symbolic-ref -q HEAD)"
   rpull = pull -r
   rs = !git --no-pager diff --name-only $1 | xargs -o nvim -O
   sl = !git --no-pager log --graph --branches --decorate --oneline --boundary --author='Colby Rabideau' --topo-order --first-parent --simplify-by-decoration --pretty=format:%D%n
   st = status -s
-  update = !git add --all && git stash && git pull --rebase origin main && git stash pop
-
-  # commands for repos that use "develop" instead of "main"
-  cd = merge-base HEAD develop
-  dd = diff develop
-  ld = !git --no-pager log --decorate --oneline $(git cd)^..
-  rbd = rebase develop
+  update = "!git add --all && git stash && git pull --rebase origin $(git main-branch) && git stash pop"
 
 [push]
   default = current
