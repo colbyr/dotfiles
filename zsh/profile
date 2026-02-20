@@ -33,3 +33,6 @@ pi() {
   cat ./package.json | jq ".$1"
 }
 
+tmux-claude() {
+  tmux new-session -s "${1:-claude}" \; send-keys "claude ${*:2}; exit" Enter
+}
