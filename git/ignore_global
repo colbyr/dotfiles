@@ -35,7 +35,8 @@
 .DS_Store*
 .DS_Store?
 ehthumbs.db
-Icon?
+# "Icon" + a carriage return
+Icon
 Thumbs.db
 *.swp
 .Spotlight-V100

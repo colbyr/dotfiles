@@ -5,7 +5,7 @@
  * Docs: https://github.com/johnste/finicky/wiki/Configuration
  */
 module.exports = {
-  defaultBrowser: "Firefox",
+  defaultBrowser: "Dia",
   options: {
     hideIcon: true
   },
