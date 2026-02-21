@@ -4,10 +4,17 @@
 ######################################
 
 source $HOME/dotfiles/zsh/profile
-source $ZSH/oh-my-zsh.sh
+
+# Completions
+autoload -Uz compinit && compinit
+
+# Antidote plugin manager
+source /opt/homebrew/opt/antidote/share/antidote/antidote.zsh
+antidote load $HOME/dotfiles/zsh/zsh_plugins.txt
+
+# Starship prompt
+eval "$(starship init zsh)"
 
 ######################################
 # End of defaults!                   #
 ######################################
-
-
