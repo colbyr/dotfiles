@@ -1,12 +1,13 @@
 return {
-  "folke/tokyonight.nvim",
+  "maxmx03/solarized.nvim",
   lazy = false,
   priority = 1000,
   opts = {
-    style = "night",
+    variant = "autumn",
   },
   config = function(_, opts)
-    require("tokyonight").setup(opts)
-    vim.cmd.colorscheme("tokyonight")
+    vim.o.background = "dark"
+    require("solarized").setup(opts)
+    vim.cmd.colorscheme("solarized")
   end,
 }
