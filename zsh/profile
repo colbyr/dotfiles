@@ -12,6 +12,10 @@ alias ll="ls -AFhlo"
 alias vimsplat="xargs -o vim -O"
 alias tmyx="tmux"
 
+# Prefix-based history search with up/down arrows
+bindkey "^[[A" history-beginning-search-backward
+bindkey "^[[B" history-beginning-search-forward
+
 function notify {
   /usr/bin/osascript -e "display notification \"$*\""
 }
@@ -31,3 +35,5 @@ pi() {
 tmux-claude() {
   tmux new-session -s "${1:-claude}" \; send-keys "claude ${*:2}; exit" Enter
 }
+
+alias cmux="tmux-claude"

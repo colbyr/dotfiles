@@ -68,3 +68,5 @@ TAGS
 .env.*.local
 
 .claude/*
+
+colbyn
