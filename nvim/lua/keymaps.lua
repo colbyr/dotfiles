@@ -10,6 +10,9 @@ map("i", "<Down>", "<Nop>")
 map("i", "<Left>", "<Nop>")
 map("i", "<Right>", "<Nop>")
 
+-- Yank entire line with Y
+map("n", "Y", "yy")
+
 -- Clear search highlight
 map("n", "<leader>h", ":nohlsearch<CR>", { silent = true })
 
