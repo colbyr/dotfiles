@@ -6,6 +6,9 @@ return {
     { "<leader>fg", function() require("fzf-lua").live_grep() end, desc = "Live grep" },
     { "<leader>fb", function() require("fzf-lua").buffers() end, desc = "Buffers" },
     { "<leader>fh", function() require("fzf-lua").helptags() end, desc = "Help tags" },
+    { "<leader>fs", function() require("fzf-lua").lsp_document_symbols() end, desc = "Document symbols" },
+    { "<leader>fw", function() require("fzf-lua").lsp_workspace_symbols() end, desc = "Workspace symbols" },
+    { "<leader>fd", function() require("fzf-lua").diagnostics_document() end, desc = "Document diagnostics" },
   },
   opts = {
     fzf_opts = {

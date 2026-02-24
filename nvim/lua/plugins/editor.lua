@@ -1,5 +1,10 @@
 return {
   {
+    "folke/which-key.nvim",
+    event = "VeryLazy",
+    opts = {},
+  },
+  {
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v3.x",
     dependencies = {
@@ -14,7 +19,12 @@ return {
       filesystem = {
         filtered_items = {
           hide_dotfiles = false,
-          hide_gitignored = false,
+          hide_gitignored = true,
+          never_show = {
+            "node_modules",
+            ".yarn",
+            ".git",
+          },
         },
       },
     },
