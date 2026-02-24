@@ -49,3 +49,4 @@ opt.undofile = true
 opt.splitright = true
 opt.splitbelow = true
 opt.updatetime = 250
+opt.exrc = true

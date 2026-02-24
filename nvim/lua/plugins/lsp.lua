@@ -10,10 +10,9 @@ return {
       "neovim/nvim-lspconfig",
     },
     opts = {
-      ensure_installed = { "ts_ls", "gopls", "lua_ls" },
+      ensure_installed = { "gopls", "lua_ls" },
       automatic_enable = {
-        -- Don't auto-enable ts_ls if tsgo is available
-        exclude = vim.fn.executable("tsgo") == 1 and { "ts_ls" } or {},
+        exclude = { "ts_ls" },
       },
     },
   },
@@ -38,11 +37,6 @@ return {
           },
         },
       })
-
-      -- Use tsgo when available
-      if vim.fn.executable("tsgo") == 1 then
-        vim.lsp.enable("tsgo")
-      end
 
       -- LSP keymaps on attach
       vim.api.nvim_create_autocmd("LspAttach", {
