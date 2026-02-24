@@ -3,6 +3,7 @@ return {
   dependencies = { "nvim-tree/nvim-web-devicons" },
   keys = {
     { "<leader>ff", function() require("fzf-lua").git_files() end, desc = "Find files" },
+    { "<leader>fr", function() require("fzf-lua").oldfiles() end, desc = "Recent files" },
     { "<leader>fg", function() require("fzf-lua").live_grep() end, desc = "Live grep" },
     { "<leader>fb", function() require("fzf-lua").buffers() end, desc = "Buffers" },
     { "<leader>fh", function() require("fzf-lua").helptags() end, desc = "Help tags" },
