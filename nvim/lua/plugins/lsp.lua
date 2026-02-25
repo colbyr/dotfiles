@@ -10,7 +10,7 @@ return {
       "neovim/nvim-lspconfig",
     },
     opts = {
-      ensure_installed = { "gopls", "lua_ls" },
+      ensure_installed = { "gopls", "lua_ls", "eslint" },
       automatic_enable = {
         exclude = { "ts_ls" },
       },
@@ -28,7 +28,15 @@ return {
         root_markers = { ".git" },
       })
 
-      -- Server-specific config
+      -- ESLint — use Yarn PnP SDK, autofix on save
+      vim.lsp.config("eslint", {
+        settings = {
+          nodePath = vim.fn.expand("$HOME/go/src/github.com/DataDog/web-ui/.yarn/sdks"),
+          run = "onSave",
+        },
+      })
+
+      -- Lua
       vim.lsp.config("lua_ls", {
         settings = {
           Lua = {
@@ -52,6 +60,7 @@ return {
           map("]d", vim.diagnostic.goto_next, "Next diagnostic")
           -- K (hover), grn (rename), gra (code action), grr (references)
           -- are built-in defaults in nvim 0.11+
+
         end,
       })
     end,
