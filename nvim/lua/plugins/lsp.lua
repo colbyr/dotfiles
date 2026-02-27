@@ -36,6 +36,32 @@ return {
         },
       })
 
+      -- Go — scope gopls to only the directories we work in (dd-source is massive)
+      vim.lsp.config("gopls", {
+        cmd = { "gopls", "--remote=auto" },
+        root_markers = { "go.mod", ".git" },
+        settings = {
+          gopls = {
+            directoryFilters = {
+              "-",
+              "+domains/data_observability",
+              "+domains/mcp_services",
+              "+domains/ugp",
+              "+libs",
+            },
+            completeUnimported = true,
+            usePlaceholders = true,
+            gofumpt = true,
+            analyses = {
+              unusedparams = false,
+              shadow = false,
+            },
+            staticcheck = true,
+            vulncheck = "off",
+          },
+        },
+      })
+
       -- Lua
       vim.lsp.config("lua_ls", {
         settings = {
@@ -61,6 +87,14 @@ return {
           -- K (hover), grn (rename), gra (code action), grr (references)
           -- are built-in defaults in nvim 0.11+
 
+        end,
+      })
+
+      -- Format Go files on save via gopls (gofumpt + organize imports)
+      vim.api.nvim_create_autocmd("BufWritePre", {
+        pattern = "*.go",
+        callback = function()
+          vim.lsp.buf.format({ timeout_ms = 3000 })
         end,
       })
     end,

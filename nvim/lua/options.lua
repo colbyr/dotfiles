@@ -34,6 +34,14 @@ opt.signcolumn = "yes"
 opt.list = true
 opt.listchars = { tab = "▸ ", trail = "·", eol = "¬", nbsp = "_" }
 
+-- In Go files, hide tab rendering but keep other listchars (trailing spaces, etc.)
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "go",
+  callback = function()
+    vim.opt_local.listchars = { tab = "  ", trail = "·", eol = "¬", nbsp = "_" }
+  end,
+})
+
 -- Mouse
 opt.mouse = "a"
 
@@ -50,3 +58,9 @@ opt.splitright = true
 opt.splitbelow = true
 opt.updatetime = 250
 opt.exrc = true
+
+-- Auto-reload files changed outside of Neovim (e.g. by Claude Code)
+opt.autoread = true
+vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold" }, {
+  command = "checktime",
+})
