@@ -1,5 +1,6 @@
 brew "antidote"
 brew "git"
+brew "go"
 brew "jq"
 brew "node"
 brew "postgres"
