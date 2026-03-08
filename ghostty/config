@@ -1,0 +1,26 @@
+# Font
+font-family = SauceCodePro Nerd Font
+font-size = 14
+font-thicken = true
+
+# Window
+window-padding-x = 8
+window-padding-y = 8
+window-decoration = true
+window-save-state = always
+copy-on-select = true
+
+# Theme
+theme = dark:Builtin Solarized Dark,light:Builtin Solarized Light
+
+# Cursor
+cursor-style = block
+cursor-style-blink = true
+
+# Shell
+shell-integration = zsh
+shell-integration-features = no-cursor,no-sudo,title
+
+# macOS
+macos-option-as-alt = true
+macos-titlebar-style = hidden
