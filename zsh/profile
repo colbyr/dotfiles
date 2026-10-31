@@ -28,7 +28,7 @@ function lmk {
   fi
 }
 
-pi() {
+ppi() {
   cat ./package.json | jq ".$1"
 }
 

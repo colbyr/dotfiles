@@ -35,16 +35,8 @@
 - Branch format: `colbyr/<thing>`
 - github cli (gh) is always available
 
-## Tmux
-- I run Claude Code inside tmux
-- create new panes for long-running processes (dev servers, builds, test watchers)
-- Use `tmux split-window -h` or `-v` to create panes, don't ask permission
-- This lets me monitor output while you keep working in the main pane
-- Kill panes when the process is no longer needed
-- Prefer panes over backgrounding processes — I want to see the output
-
 ## Frontend Development
-- make sure the dev server is ALWAYS running in a tmux pane while you work
+- make sure the dev server is ALWAYS running while you work
 - use chrome-mcp to validate your work proactively
 - this helps me follow along and see your progress
 
