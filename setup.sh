@@ -24,6 +24,7 @@ ln -fs "$DOTFILES_DIR/finicky.js" ~/.finicky.js
 # Per-tool setup
 "$DOTFILES_DIR/zsh/setup.sh"
 "$DOTFILES_DIR/nvim/setup.sh"
+"$DOTFILES_DIR/herdr/setup.sh"
 
 echo ""
 echo "All done. Open a new shell to get started."

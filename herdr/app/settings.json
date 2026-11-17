@@ -1,0 +1,10 @@
+{
+  "zoom": 1,
+  "sounds": {
+    "enabled": true
+  },
+  "font": "Source Code Pro",
+  "font_size": 13,
+  "minimum_contrast": 1,
+  "appearance": "dark"
+}
